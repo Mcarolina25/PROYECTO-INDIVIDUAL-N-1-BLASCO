@@ -10,6 +10,7 @@ app = FastAPI()
 
 # Cargar el dataset procesado
 movies = pd.read_csv('C:/Users/Admin/Desktop/PROYECTO INDIVIDUAL 1º/Movies/processed_movies_dataset.csv', low_memory=False)
+credits= pd.read_csv('C:\Users\Admin\Desktop\PROYECTO INDIVIDUAL 1º\Movies\processed_credits_dataset.csv')
 
 @app.get("/")
 def read_root():
