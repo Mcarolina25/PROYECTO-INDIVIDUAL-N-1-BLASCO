@@ -126,7 +126,7 @@ def generar_nube_palabras():
     plt.close()
 
 # Preprocesar los datos para la recomendación
-tfidf = TfidfVectorizer(stop_words='english')
+tfidf = TfidfVectorizer(stop_words='english', max_features=1000)  # Limitar a las 1000 características más importantes
 # Asegúrate de que 'genres' esté presente en el DataFrame
 if 'genres' in movies.columns:
     movies['combined_features'] = movies['genres']  # Solo usando géneros para la recomendación
